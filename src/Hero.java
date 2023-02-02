@@ -50,20 +50,20 @@ public class Hero {
     }
 
     public String nFightsToTheDeath(Hero opponent, int n){
-        int hero =0;
+        int hero = 0;
         for (int i = 0; i<n; i++){
             senzuBean();
             opponent.senzuBean();
             fightUntilTheDeathHelper(opponent);
             if (this.hitPoints > 0)
                 hero++;
-
         }
         int opp = n-hero;
+
         if(hero < opp)
-            return (this.name + ": " + hero + " wins\n"+opponent.getName() + ": " + opp + "wins\n" + opponent.getName() + "wins!");
+            return (this.name + ": " + hero + " wins\n"+opponent.getName() + ": " + opp + " wins\n" + opponent.getName() + "wins!");
         else if (hero > opp) {
-            return (this.name + ": " + hero + " wins\n"+opponent.getName() + ": " + opp + "wins\n" + name + "wins!");
+            return (this.name + ": " + hero + " wins\n"+opponent.getName() + ": " + opp + " wins\n" + this.name + "wins!");
         }
         else
             return (this.name + ": " + hero + " wins\n"+opponent.getName() + ": " + opp + "wins\nOMG! It was actually a draw!");
